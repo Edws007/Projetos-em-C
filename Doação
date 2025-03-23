@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int main(){
+
+	int doacao;
+	float valor;
+
+	printf("\n\tCRIANÇA ESPERANÇA\n");
+	printf("----------------------------------\n");
+	printf("[1] para doar R$10.00\n");
+	printf("[2] para doar R$20.00\n");
+	printf("[3] para doar R$30.00\n");
+	printf("[4] para doar R$40.00\n");
+	printf("[5] para doar CANCELAR.\n");
+	printf("----------------------------------\n");
+	fflush(stdout);
+	scanf("%d", &doacao);
+
+	switch(doacao){
+
+	case 1:
+		valor = 10.00;
+		break;
+
+	case 2:
+		valor = 20.00;
+		break;
+
+	case 3:
+		valor = 30.00;
+		break;
+
+
+	case 4:
+		valor = 40.00;
+		break;
+
+	case 5:
+		valor = 0.00;
+		break;
+
+	default:
+		printf("Opção inválida! \n");
+	}
+
+	printf("Sua doação foi de R$ %.2f\n", valor);
+	printf("Muito obrigado pela sua doação!\n\n");
+
+	return 0;
+}
