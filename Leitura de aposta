@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int main(){
+
+	float valor1, valor2, valor3, total_apostas = 0;
+	float premio = 0;
+
+	//Variáveis Auxiliares
+	float porcentagem1, porcentagem2, porcentagem3, total_porcentagens = 0;
+	float premio1, premio2, premio3, total_premios = 0;
+
+	printf("Insira o valor da aposta do apostador 1: ");
+	fflush(stdout);
+	scanf("%f", &valor1);
+
+	printf("Insira o valor da aposta do apostador 2: ");
+	fflush(stdout);
+	scanf("%f", &valor2);
+
+	printf("Insira o valor da aposta do apostador 3: ");
+	fflush(stdout);
+	scanf("%f", &valor3);
+
+	printf("Informe o valor do prêmio: ");
+	fflush(stdout);
+	scanf("%f", &premio);
+
+	total_apostas = (float)(valor1 + valor2 + valor3);
+
+	printf("O total de apostas foi de %.2f\n", total_apostas);
+
+	porcentagem1 = (float)(valor1 / total_apostas);
+	porcentagem2 = (float)(valor2 / total_apostas);
+	porcentagem3 = (float)(valor3 / total_apostas);
+	total_porcentagens = (float)(porcentagem1 + porcentagem2 + porcentagem3);
+	printf("O total de porcentagens é %.2f\n", total_porcentagens);
+
+	premio1 = (float)(premio * porcentagem1);
+	premio2 = (float)(premio * porcentagem2);
+	premio3 = (float)(premio * porcentagem3);
+	total_premios = (float)(premio1 + premio2 + premio3);
+	printf("O total em prêmios é %.2f\n", total_premios);
+
+	printf("O apostador 1 apostou %.2f que corresponde a %.2f e deverá receber o prêmio de %.2f\n", valor1, porcentagem1, premio1);
+	printf("O apostador 2 apostou %.2f que corresponde a %.2f e deverá receber o prêmio de %.2f\n", valor2, porcentagem2, premio2);
+	printf("O apostador 3 apostou %.2f que corresponde a %.2f e deverá receber o prêmio de %.2f\n", valor3, porcentagem3, premio3);
+	return 0;
+}
