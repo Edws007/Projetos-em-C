@@ -1,21 +1,23 @@
 #include <stdio.h>
-void soma(int* num, int a, int b, int c){
-	*num = a + b + c;
-}
 
 int main(){
 
-	int num, a, b,c;
+	int valor1, valor2, valor3, soma = 0;
 
-	printf("Digite tres valores inteiros: ");
-
+	printf("Informe o valor 1: ");
 	fflush(stdout);
+	scanf("%d", &valor1);
 
-	scanf("%d %d %d", &a, &b, &c);
+	printf("Informe o valor 2: ");
+	fflush(stdout);
+	scanf("%d", &valor2);
 
-	soma(&num, a, b, c);
+	printf("Informe o valor 3: ");
+	fflush(stdout);
+	scanf("%d", &valor3);
 
-	printf("O resultado: %d", num);
+	soma = valor1 + valor2 + valor3;
+
+	printf("A soma dos valores informados é: %d", soma);
 
 	return 0;
-}
