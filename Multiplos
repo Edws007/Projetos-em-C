@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main(){
+
+	int num;
+	int num1 = 0;
+	int num2 = 0;
+	int num3 = 0;
+	int num4 = 0;
+	//int num5 = 0;
+
+
+
+	printf("Digite um número: ");
+	fflush(stdout);
+	scanf("%d", &num);
+
+	num1 = num + num;
+	num2 = num1 + num;
+	num3 = num2 + num;
+	num4 = num3 + num;
+	//num5 = num4 + num;
+
+	printf("Primeiro multiplo desse número é: %d \n", num);
+
+	printf("Segundo multiplo desse número é: %d \n", num1);
+
+	printf("Terceiro multiplo desse número é: %d \n", num2);
+
+	printf("Quarto multiplo desse número é: %d \n", num3);
+
+	printf("Quinto multiplo desse número é: %d \n", num4);
+
+	//printf("Multiplo quinto de 3: %d \n", num5);
+
+
+
+	return 0;
+}
